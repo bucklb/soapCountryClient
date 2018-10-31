@@ -1,0 +1,17 @@
+Clues on WTAF is meant to happen & how to demonstrate it ...
+
+Based on (effectively a copy of) spring.io starter guide at
+    http://spring.io/guides/gs/consuming-web-service/
+
+
+On clean there will be lots of red.  Compile will auto-generate the stuff to fix it in
+    target\classe\hello\wsdl
+
+They will be in bit code and no point amending as the get blitzed each time anyway
+NOTE : need the wsdl to be available (probably easiest to have soapCountryServer running on 8080.  Need to change the POM
+if we change where to look for the WSDL (perhaps to a local copy)
+
+All this does is grab a country object from the server and create a stringified version
+
+
+
