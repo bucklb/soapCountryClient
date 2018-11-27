@@ -51,10 +51,18 @@
                     <generatePackage>hello.wsdl</generatePackage>
                     <schemas>
                         <schema>
-                            <!-- I suspect that if the server port changes probably need to change this too
-                                 and seems likely that the server ought to be running when attempting to do
-                                 the (auto) generate -->
-                            <url>http://localhost:8080/ws/countries.wsdl</url>
+                            <fileset>
+                                <!-- Defaults to schemaDirectory. -->
+                                <directory>${basedir}/src/main/sresources</directory>
+                                <!-- Defaults to schemaIncludes. -->
+                                <includes>
+                                    <include>*.xsd</include>
+                                </includes>
+                                <!-- Defaults to schemaIncludes -->
+                                <excludes>
+                                    <exclude>*.xs</exclude>
+                                </excludes>
+                            </fileset>
                         </schema>
                     </schemas>
                 </configuration>
